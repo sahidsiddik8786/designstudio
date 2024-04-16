@@ -1,0 +1,219 @@
+
+  .icon {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 20px;
+  }
+  .icon_header {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 26px;
+  }
+  .icon, .icon_header {
+    margin-right: 5px;
+  }
+  
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'sidebar header header header'
+      'sidebar main main main';
+    height: 100vh;
+  }
+  
+/* Header  */
+.header {
+  grid-area: header;
+  background-color: #fcfcfc;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header  */
+  
+  /* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #000000;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 60px 10px 40px 30px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.sidebar-list-item:hover {
+  background-color: #f9025d;
+  cursor: pointer;
+}
+
+.sidebar-list-item> a {
+  text-decoration: none;
+  
+  color: #c2c2c2;
+}
+
+.sidebar-brand {
+  text-decoration: none;
+  
+  color: #ffffff;
+}
+
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+  
+
+ 
+
+    
+  @media screen and (max-width: 992px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        'header'
+        'main';
+    }
+  
+    #sidebar {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: inline;
+    }
+  
+    .sidebar-title > span {
+      display: inline;
+    }
+  }
+
+    
+
+
+/* ProductDashboard.css */
+
+/* Overall styling */
+.dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section */
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fbfbfb;
+}
+
+/* Metrics section */
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.metric-item {
+    text-align: center;
+}
+.metric-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+.metric-label {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Graphs section */
+.graphs {
+    margin-top: 30px;
+}
+/* Customize your graphs here */
+
+/* Footer section */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+
+
+/* Staff.css */
+
+/* Add background image to the entire dashboard */
+.grid-container {
+  background-color: white; 
+  background-size: cover;
+  background-position: center;
+}
+
+/* Additional styling for other elements in the dashboard can be added below */
+
+/* Add this CSS to your existing CSS file or create a new one */
+.form-containe {
+  margin: auto; /* Center the form horizontally */
+  width: 90%; 
+  height: 10%;  /* Adjust the width of the form container */
+  
+}
