@@ -10,7 +10,6 @@ import cors from 'cors';
 import session from 'express-session';
 import userModel from './models/userModel.js';
 import nodemailer from 'nodemailer';
-import bcrypt from 'bcrypt';
 import categoryRoutes from "./routes/categoryRoute.js";
 import designcategoryRoutes  from "./routes/designcategoryRoute.js"
 import productRoutes from "./routes/productRoute.js";
@@ -141,10 +140,8 @@ app.post('/update-password', async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    // Update the user's password by hashing it
-    const saltRounds = 10; // Adjust the number of salt rounds as needed
-    const hashedPassword = await bcrypt.hash(newPassword, saltRounds);
-    user.password = hashedPassword;
+    // Update the user's password directly with the plain text password
+    user.password = newPassword;
 
     // Save the updated user
     await user.save();
