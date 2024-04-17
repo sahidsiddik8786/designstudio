@@ -78,7 +78,7 @@ app.use('/api/v1/site', siteRoutes);
 
 //app.use("/api/v1/payment", Payment);
 
-app.get('/', (req, res) => {
+app.get('/http://localhost:3000', (req, res) => {
   res.send('<h1>Welcome to MERN stack project</h1>');
 });
 
