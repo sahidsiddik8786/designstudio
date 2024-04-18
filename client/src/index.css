@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@300;400&display=swap");
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar css */
+
+.navbar{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 6px -6px grey ;
+    ---webkit-box-shadow: 0 8px 6px -6px grey;
+    border-bottom: solid grey !important;
+}
+.nav-link {
+    font-weight: 300 !important;
+  }
+  
+  .active {
+    border-bottom: 2px solid blue;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-family: "roboto", sans-serif;
+    letter-spacing: 3px;
+  }
+
+
+  /* =============================
+==========footer============= */
+
+.footer {
+    color: white;
+    padding: 25px;
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer a:hover {
+    color: #ffefba;
+    border-bottom: 1px solid #ffefba;
+  }
+
+  /* =================================
+======== page not found css ======= */
+.pnf {
+    display: flex;
+    min-height: 65vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pnf-title {
+    font-size: 100px;
+    font-weight: 700;
+  }
+  
+  .pnf-heading {
+    font-weight: normal;
+  }
+  
+  .pnf-btn {
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .pnf-btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+
+ 
+/* Responsive Styles (adjust as needed) */
+@media (max-width: 768px) {
+  .form-control {
+    width: 80%;
+  }
+}
+
+
+
+.dashboard {
+  margin-top: 100px !important;
+}
+
+.dashboard-menu h4 {
+  background-color: #434343 !important;
+  color: white;
+  padding: 20px 0px;
+}
+/* You can adjust the styles to match your design preferences */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.verify-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.verify-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.resend-link {
+  margin-top: 10px;
+}
+
+.resend-link.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Additional styles can be added as needed */
+
+/* Login.css */
+
+.login-form {
+  max-width: 300px;
+  margin: 0 auto;
+  /* Set the background color to black */
+  color: white; /* Set the text color to white */
+  padding: 20px; /* Add some padding for better visibility */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.error-text {
+  color: red;
+}
+
+.forgot-link {
+  color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+
+.btns {
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: none;
+  border: 0.6px solid #ccc;
+  border-radius: 5px;
+  color: #323232;
+  cursor: pointer;
+}

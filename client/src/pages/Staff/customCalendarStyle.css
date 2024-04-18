@@ -1,0 +1,209 @@
+.calendar {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.779);
+    color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+    max-height: 600px;
+    margin: auto;
+    margin-left: 0px; 
+    margin-right: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    background: url('https://wallpapercave.com/wp/wp9183117.jpg') left center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+    color: #000000;
+}
+
+.calendar-header::before {
+    
+    font-size: 7px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 150px; /* Adjust as per your design needs */
+}
+
+.month-display {
+    background: rgba(255, 255, 255, 0.821);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px; 
+}
+
+.current-month {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.current-day {
+    font-size: 4.5em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.current-year {
+    font-size: 1.5em;
+}
+
+
+
+.calendar-days-of-week {
+    display: flex;
+    justify-content: space-between;
+    background: #272525e0;
+    padding: 5px 20px; 
+    font-weight: bold;
+}
+
+.calendar-days {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px px; 
+    font-size: 20px;
+    cursor: pointer; 
+}
+
+
+
+.day-of-week {
+    padding: 7px;
+}
+
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px; 
+    padding: 15px;
+    
+}
+
+
+.calendar-day {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px; 
+}
+
+.calendar-day:hover {
+    background-color: #fbfafaa7;
+}
+
+.today {
+    background-color: #ff00ae;
+    color: #1a1919;
+}
+.calendar-day.empty {
+    background: transparent; /* Hide the empty divs */
+}
+
+
+
+.custom-table {
+    overflow-x: auto;
+  } 
+  .custom-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .custom-table th {
+    background-color: #f2f2f2;
+  }
+  
+
+  /*--------------------------------------------------*/
+
+  /* Apply base styles to the entire component */
+.mt-0 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 1400px;
+  margin: auto;
+  overflow-x: auto; /* Ensure table is scrollable on small screens */
+}
+
+/* Style the table headers */
+.mt-0 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the table itself */
+.mt-0 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.mt-0 th, .mt-0 td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ffffff; /* Light gray border for rows */
+}
+
+.mt-0 th {
+  background-color: #000; /* Black background for headers */
+  color: #ffffff; /* White text for headers */
+}
+
+/* Zebra striping for rows */
+.mt-0 tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .mt-0 h1 {
+    font-size: 18px; /* Smaller font size on smaller screens */
+  }
+
+  .mt-0 th, .mt-0 td {
+    padding: 8px; /* Smaller padding on smaller screens */
+  }
+}
+
+
+.eye-opener-button {
+  /* Style your button here */
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* If you want to change the icon color or size */
+.eye-opener-button .svg-inline--fa {
+  color: #000; /* Change color */
+  font-size: 1.5em; /* Change size */
+}

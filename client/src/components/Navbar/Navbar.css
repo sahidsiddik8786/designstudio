@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 120px;
+  color: rgb(2, 13, 14);
+}
+.nav-logo {
+  font-family: Outfit;
+  font-size: 50px;
+  font-weight: 500;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 23px;
+  gap: 90px;
+}
+
+.nav-contact {
+  border-radius: 30px;
+  padding: 15px 30px; 
+  background: #ffffff;
+  color: #000000;
+}
+
+
+.signin {
+  background: orange; 
+  padding: 15px 48px; 
+  border-radius: 50px; 
+  color: white; 
+}
+
+.nav-logo {
+  color: white;
+  font-family: Outfit;
+  font-size: 50px;
+  font-weight: 250;
+}

@@ -1,0 +1,120 @@
+ /*
+.gradient-custom-2 {
+    fallback for old browsers 
+    background: #fccb90;
+  
+
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  
+ 
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  }
+  
+  @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+  }
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }
+
+*/
+
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 390px;
+    height: 90%;
+    
+    background: #000000c5;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-size: 40px;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #008000; /* Standard green color */
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #078200;
+  }
+  
+  .forgot-password-link,
+  .register-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #ffffff;
+  }
+  
+  .forgot-password-link {
+    color: #f6f6f6;
+    text-decoration: none;
+  }
+  
+  .register-link {
+    color: #ffffff;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+
+  .login-overlay-container {
+    position: absolute; 
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:  800px; 
+    height: 580px; 
+    padding: 20px;
+   
+  }
+  
+  .login-background-container {
+    height: 89vh; 
+    width: 100vw; 
+    overflow: hidden; 
+  }

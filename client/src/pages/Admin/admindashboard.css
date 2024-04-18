@@ -1,0 +1,131 @@
+.admin-dashboard {
+    background-color: #263238; /* Dark background for the dashboard */
+    color: white;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif; /* Example font */
+  }
+   
+  .summary-card-inner {
+    text-align: center;
+  }
+  
+
+  :root {
+    --card-bg: #32384D;
+    --primary-blue: #29B6F6;
+    --primary-pink: #AB47BC;
+    --primary-orange: #FF7043;
+    --primary-green: #66BB6A;
+    --font-color: #FFFFFF;
+  }
+  
+  .admin-container {
+    display: flex;
+    flex-wrap: nowrap; /* Added to prevent wrapping */
+  }
+
+  .admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color:  #8db6b7dc;
+    margin-left: -61px; 
+    height: 854px;
+  }
+  
+  .summary-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; 
+  }
+  
+  .summary-card {
+    flex: 1;
+    min-width: 220px; /* Minimum width of cards */
+    background-color: var(--card-bg);
+    color: var(--font-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    position: relative; /* For positioning the percentage indicator */
+  }
+  
+  .summary-card-title {
+    font-size: 1em;
+    margin-bottom: .5em;
+  }
+  
+  .summary-card-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+  }
+  
+  .summary-card-percentage {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+    background-color: var(--color); /* This will use the color passed in the style prop */
+  }
+  
+  .summary-card-percentage span {
+    display: block;
+    transform: rotate(-90deg);
+  }
+
+  
+
+
+  .chart {
+    background-color: #37474F;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    /* Temporary styling for placeholder */
+    height: 309px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+/* Styles for charts */
+.charts-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between charts */
+  }
+
+
+  /* Responsive styling */
+@media (max-width: 768px) {
+    .summary-section {
+      flex-direction: column;
+    }
+  
+    .charts-section {
+      flex-direction: column;
+    }
+  }
+  
+  
+  /* Add @font-face or import fonts as needed */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+  
+  /* Responsive styling */
+@media (max-width: 768px) {
+    .admin-container {
+      flex-direction: column;
+    }
+  
+    .admin-content {
+      margin-left: 0; /* Remove the negative margin on smaller screens */
+    }
+  }
