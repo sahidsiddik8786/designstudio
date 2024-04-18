@@ -14,7 +14,7 @@ const Orders = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/auth/orders");
+      const { data } = await axios.get("https://enigma-designs.onrender.com/api/v1/auth/orders");
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -55,7 +55,7 @@ const Orders = () => {
                 {order?.products?.map((product, productIndex) => (
                   <div key={productIndex} className="product-details">
                     <img
-                      src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+                      src={`https://enigma-designs.onrender.com/api/v1/product/product-photo/${product._id}`}
                       alt={product.name}
                       className="product-image"
                     />

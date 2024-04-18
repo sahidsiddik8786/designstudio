@@ -20,7 +20,7 @@ const CreatesubCategory = () => {
 
   const getAllCategories = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8080/api/v1/category/get-category');
+      const { data } = await axios.get('https://enigma-designs.onrender.com/api/v1/category/get-category');
       if (data.success) {
         setCategories(data.category);
       }
@@ -32,7 +32,7 @@ const CreatesubCategory = () => {
 
   const getAllSubcategories = async (categoryId) => {
     try {
-      const { data } = await axios.get(`http://localhost:8080/api/v1/category/${categoryId}/subcategories`);
+      const { data } = await axios.get(`https://enigma-designs.onrender.com/api/v1/category/${categoryId}/subcategories`);
       if (data.success) {
         setSubcategories(data.subcategories);
       }
@@ -49,7 +49,7 @@ const CreatesubCategory = () => {
         return;
       }
 
-      const { data } = await axios.post(`http://localhost:8080/api/v1/category/${selectedCategory}/subcategories`, {
+      const { data } = await axios.post(`https://enigma-designs.onrender.com/api/v1/category/${selectedCategory}/subcategories`, {
         name: subcategoryName,
         parentCategoryId: selectedCategory,
       });
@@ -84,7 +84,7 @@ const CreatesubCategory = () => {
         return;
       }
 
-      const { data } = await axios.put(`http://localhost:8080/api/v1/category/update-subcategory/${selectedSubcategory._id}`, {
+      const { data } = await axios.put(`https://enigma-designs.onrender.com/api/v1/category/update-subcategory/${selectedSubcategory._id}`, {
         name: updatedSubcategoryName,
       });
 
@@ -103,7 +103,7 @@ const CreatesubCategory = () => {
 
   const handleDisableSubcategory = async (subcategoryId) => {
     try {
-      const { data } = await axios.put(`http://localhost:8080/api/v1/category/disable-subcategory/${subcategoryId}`);
+      const { data } = await axios.put(`https://enigma-designs.onrender.com/api/v1/category/disable-subcategory/${subcategoryId}`);
 
       if (data.success) {
         message.success('Subcategory disabled successfully.');

@@ -22,7 +22,7 @@ const UserImagesPage = () => {
     const fetchUserImages = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/site/user/${userId}/images`
+          `https://enigma-designs.onrender.com/api/v1/site/user/${userId}/images`
         );
         setImages(response.data.map((site) => site.images).flat());
         setLoading(false);
@@ -39,7 +39,7 @@ const UserImagesPage = () => {
     const fetchSuggestedImages = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/get-suggestion-images/${userId}`
+          `https://enigma-designs.onrender.com/api/get-suggestion-images/${userId}`
         );
         const imageUrls = response.data.map(img => 
           `data:${img.contentType};base64,${img.data}`
@@ -107,7 +107,7 @@ const UserImagesPage = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8080/api/upload-suggestion",
+        "https://enigma-designs.onrender.com/api/upload-suggestion",
         formData,
         {
           headers: {

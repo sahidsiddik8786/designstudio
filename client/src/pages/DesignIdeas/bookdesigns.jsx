@@ -21,7 +21,7 @@ const Bookdesigns = () => {
 
   const fetchSlots = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/slots", {
+      const response = await axios.get("https://enigma-designs.onrender.com/api/slots", {
         headers: {
           Authorization: auth.token, // Set Authorization header
         },
@@ -55,7 +55,7 @@ const Bookdesigns = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:8080/api/book", {
+      const response = await axios.post("https://enigma-designs.onrender.com/api/book", {
         appointmentId,
         slotId,
         recipient_email: auth.user.email, // Pass the recipient email here

@@ -10,7 +10,7 @@ export default function PrivateRoute() {
 
     useEffect(() => {
         const authCheck = async () => {
-            const res = await axios.get("http://localhost:8080/api/v1/auth/admin-auth");
+            const res = await axios.get("https://enigma-designs.onrender.com/api/v1/auth/admin-auth");
             console.log("API Response:", res.data);
             if (res.data.ok) {
                 setOk(true);

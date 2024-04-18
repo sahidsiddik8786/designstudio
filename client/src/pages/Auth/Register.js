@@ -124,7 +124,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/auth/register",
+        "https://enigma-designs.onrender.com/api/v1/auth/register",
         {
           firstName,
           lastName,
@@ -354,7 +354,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/auth/register",
+        "https://enigma-designs.onrender.com/api/v1/auth/register",
         data
       );
 

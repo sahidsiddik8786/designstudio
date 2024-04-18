@@ -29,7 +29,7 @@ function MyComponent() {
       setOTP(OTP);
 
       axios
-        .post("http://localhost:8080/send_recovery_email", {
+        .post("https://enigma-designs.onrender.com/send_recovery_email", {
           OTP,
           recipient_email: email,
         })

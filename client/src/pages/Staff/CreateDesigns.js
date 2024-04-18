@@ -41,7 +41,7 @@ const [auth, setAuth, loading] = useAuth();
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/categorydesign/get-categorydesign"
+        "https://enigma-designs.onrender.com/api/v1/categorydesign/get-categorydesign"
       );
       if (data.success) {
         setCategories(data.categorydesign);
@@ -55,7 +55,7 @@ const [auth, setAuth, loading] = useAuth();
   const getSubcategories = async (categoryId) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/categorydesign/${categoryId}/subcategories`
+        `https://enigma-designs.onrender.com/api/v1/categorydesign/${categoryId}/subcategories`
       );
   
       if (data?.success) {
@@ -103,7 +103,7 @@ const [auth, setAuth, loading] = useAuth();
 
 
         const { data } = await axios.post(
-          "http://localhost:8080/api/v1/design/create-design",
+          "https://enigma-designs.onrender.com/api/v1/design/create-design",
           designData
         );
 

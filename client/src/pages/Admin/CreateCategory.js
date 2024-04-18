@@ -26,7 +26,7 @@ const CreateCategory = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/category/create-category",
+        "https://enigma-designs.onrender.com/api/v1/category/create-category",
         {
           name,
         }
@@ -49,7 +49,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://enigma-designs.onrender.com/api/v1/category/get-category"
       );
       if (data.success) {
         setCategories(data.category);
@@ -74,7 +74,7 @@ const CreateCategory = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/category/update-category/${selected._id}`,
+        `https://enigma-designs.onrender.com/api/v1/category/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {
@@ -95,7 +95,7 @@ const CreateCategory = () => {
   const handleDisable = async (categoryId) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/category/disable-category/${categoryId}`
+        `https://enigma-designs.onrender.com/api/v1/category/disable-category/${categoryId}`
       );
       if (data.success) {
         toast.success("Category is disabled");

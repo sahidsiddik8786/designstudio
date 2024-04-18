@@ -68,7 +68,7 @@ const CartPage = () => {
   const getToken = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/product/braintree/token"
+        "https://enigma-designs.onrender.com/api/v1/product/braintree/token"
       );
       setClientToken(data?.clientToken);
     } catch (error) {
@@ -91,7 +91,7 @@ const CartPage = () => {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/product/braintree/payment",
+        "https://enigma-designs.onrender.com/api/v1/product/braintree/payment",
         {
           nonce,
           cart,
@@ -120,7 +120,7 @@ const CartPage = () => {
 
       handler: async (response) => {
         try {
-          const verifyUrl = "http://localhost:8080/api/v1/payment/verify";
+          const verifyUrl = "https://enigma-designs.onrender.com/api/v1/payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
         } catch (error) {
@@ -137,7 +137,7 @@ const CartPage = () => {
 
   const handlepayment = async () => {
     try {
-      const orderUrl = "http://localhost:8080/api/v1/payment/orders";
+      const orderUrl = "https://enigma-designs.onrender.com/api/v1/payment/orders";
       const { data } = await axios.post(orderUrl, {
         
         amount: parseFloat(totalPrice), // Send the total amount directly
@@ -214,7 +214,7 @@ const CartPage = () => {
                   <td>{item.name}</td>
                   <td>
                     <img
-                      src={`http://localhost:8080/api/v1/product/product-photo/${item._id}`}
+                      src={`https://enigma-designs.onrender.com/api/v1/product/product-photo/${item._id}`}
                       alt={item.name}
                       className="img-fluid"
                       style={{ maxWidth: "100px", maxHeight: "100px" }}

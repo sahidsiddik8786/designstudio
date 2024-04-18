@@ -45,7 +45,7 @@ const WishlistPage = () => {
                   <CardMedia
                     component="img"
                     height="200"
-                    image={`http://localhost:8080/api/v1/product/product-photo/${
+                    image={`https://enigma-designs.onrender.com/api/v1/product/product-photo/${
                       product._id || ""
                     }`}
                     alt={product.name}

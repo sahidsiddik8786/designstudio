@@ -3,7 +3,7 @@ import axios from "axios";
 
 import '../../pages/Admin/Users.css'
 
-const API_URL = "http://localhost:8080";
+const API_URL = "https://enigma-designs.onrender.com";
 
 const Userstaff = () => {
   const [users, setUsers] = useState([]);

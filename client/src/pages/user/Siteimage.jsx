@@ -17,7 +17,7 @@ const SiteDetails = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/site/all-sites"
+          "https://enigma-designs.onrender.com/api/v1/site/all-sites"
         );
         const siteDetailsData = response.data;
 
@@ -25,7 +25,7 @@ const SiteDetails = () => {
         for (let site of siteDetailsData) {
           try {
             const res = await axios.get(
-              `http://localhost:8080/api/get-suggestionimages/${site._id}`
+              `https://enigma-designs.onrender.com/api/get-suggestionimages/${site._id}`
             );
             site.suggestedImages = res.data; // Add suggested images to site object
           } catch (err) {

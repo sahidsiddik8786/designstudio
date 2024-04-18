@@ -12,7 +12,7 @@ const Designs = () => {
   //get all products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/design/get-design");
+      const { data } = await axios.get("https://enigma-designs.onrender.com/api/v1/design/get-design");
       setDesigns(data.designs);
     } catch (error) {
       console.log(error);
@@ -39,7 +39,7 @@ const Designs = () => {
               <Link key={p._id} to={`/dashboard/admin/design/${p.slug}`} className="product-link">
                 <div className="card m-3" style={{ width: "23rem" }}>
                   <img
-                    src={`http://localhost:8080/api/v1/design/design-photo/${p._id}`}
+                    src={`https://enigma-designs.onrender.com/api/v1/design/design-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                     style={{ width: "100%", height: "auto" }}

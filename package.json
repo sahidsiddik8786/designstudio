@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "proxy": "http://localhost:8080",
+  "proxy": "https://enigma-designs.onrender.com",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

@@ -36,7 +36,7 @@ const CreateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://enigma-designs.onrender.com/api/v1/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -51,7 +51,7 @@ const CreateProduct = () => {
   const getSubcategories = async (categoryId) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/category/${categoryId}/subcategories`
+        `https://enigma-designs.onrender.com/api/v1/category/${categoryId}/subcategories`
       );
       if (data?.success) {
         setSubcategories(data?.subcategories);
@@ -91,7 +91,7 @@ const CreateProduct = () => {
         productData.append("subcategory", subcategory);  // Added subcategory to the form data
 
         const { data } = await axios.post(
-          "http://localhost:8080/api/v1/product/create-product",
+          "https://enigma-designs.onrender.com/api/v1/product/create-product",
           productData
         );
         

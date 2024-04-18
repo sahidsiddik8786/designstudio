@@ -128,7 +128,7 @@ useEffect(() => {
     try {
       // Send a PUT request to update the user's profile without the password field
       const { data } = await axios.put(
-        "http://localhost:8080/api/v1/staff/profile-staff",
+        "https://enigma-designs.onrender.com/api/v1/staff/profile-staff",
         {
           firstname,
           lastname,

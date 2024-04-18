@@ -20,7 +20,7 @@ const CreatesubCategoryDesign = () => {
 
   const getAllCategories = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8080/api/v1/categorydesign/get-categorydesign');
+      const { data } = await axios.get('https://enigma-designs.onrender.com/api/v1/categorydesign/get-categorydesign');
       if (data.success) {
         setCategories(data.categorydesign);
       }
@@ -32,7 +32,7 @@ const CreatesubCategoryDesign = () => {
 
   const getAllSubcategories = async (categoryId) => {
     try {
-      const { data } = await axios.get(`http://localhost:8080/api/v1/categorydesign/${categoryId}/subcategorydesign`);
+      const { data } = await axios.get(`https://enigma-designs.onrender.com/api/v1/categorydesign/${categoryId}/subcategorydesign`);
       if (data.success) {
         setSubcategories(data.subcategories);
       }
@@ -49,7 +49,7 @@ const CreatesubCategoryDesign = () => {
         return;
       }
   
-      const { data } = await axios.post(`http://localhost:8080/api/v1/categorydesign/${selectedCategory}/subcategorydesign`, {
+      const { data } = await axios.post(`https://enigma-designs.onrender.com/api/v1/categorydesign/${selectedCategory}/subcategorydesign`, {
         name: subcategoryName,
         parentCategorydesignId: selectedCategory, // Update the field name here
       });
@@ -84,7 +84,7 @@ const CreatesubCategoryDesign = () => {
         return;
       }
 
-      const { data } = await axios.put(`http://localhost:8080/api/v1/categorydesign/update-subcategory/${selectedSubcategory._id}`, {
+      const { data } = await axios.put(`https://enigma-designs.onrender.com/api/v1/categorydesign/update-subcategory/${selectedSubcategory._id}`, {
         name: updatedSubcategoryName,
       });
 

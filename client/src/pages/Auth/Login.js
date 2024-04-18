@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/v1/both/general-login", {
+      const res = await axios.post("https://enigma-designs.onrender.com/api/v1/both/general-login", {
         email,
         password,
       });

@@ -10,7 +10,7 @@ const SubcategoryList = ({ categoryId }) => {
       return;
     }
 
-    fetch(`http://localhost:8080/api/v1/category/${categoryId}/subcategories`)
+    fetch(`https://enigma-designs.onrender.com/api/v1/category/${categoryId}/subcategories`)
       .then((response) => response.json())
       .then((data) => setSubcategories(data.subcategories))
       .catch((error) => console.error(error));

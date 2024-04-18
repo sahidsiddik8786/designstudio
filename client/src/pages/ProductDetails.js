@@ -27,7 +27,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.slug}`
+        `https://enigma-designs.onrender.com/api/v1/product/get-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
@@ -39,7 +39,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/related-product/${pid}/${cid}`
+        `https://enigma-designs.onrender.com/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {
@@ -65,7 +65,7 @@ const ProductDetails = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <img
-              src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+              src={`https://enigma-designs.onrender.com/api/v1/product/product-photo/${product._id}`}
               style={{ width: "100%", height: "100%" }}
               alt={product.name}
             />
@@ -106,7 +106,7 @@ const ProductDetails = () => {
                 }}
               >
                 <img
-                  src={`http://localhost:8080/api/v1/product/product-photo/${p?._id}`}
+                  src={`https://enigma-designs.onrender.com/api/v1/product/product-photo/${p?._id}`}
                   style={{ width: "100%", height: "200px", objectFit: "cover" }}
                   alt={p.name}
                 />

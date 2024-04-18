@@ -59,7 +59,7 @@ const AddAppointment = () => {
 
   const fetchScheduledSlots = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/slots");
+      const response = await axios.get("https://enigma-designs.onrender.com/api/slots");
       console.log(response.data);
       setEvents(response.data);
       // Update slots state after fetching scheduled slots
@@ -130,7 +130,7 @@ const AddAppointment = () => {
     };
 
     try {
-      await axios.post("http://localhost:8080/api/appointment", schedule);
+      await axios.post("https://enigma-designs.onrender.com/api/appointment", schedule);
       setSuccessMessage("Schedule created successfully!");
       toast.success("Schedule created successfully!");
       setDate("");
@@ -175,7 +175,7 @@ const AddAppointment = () => {
 
     try {
       await axios.put(
-        `http://localhost:8080/api/appointment/${rescheduleEventId}/reschedule`,
+        `https://enigma-designs.onrender.com/api/appointment/${rescheduleEventId}/reschedule`,
         {
           date: newRescheduleDate,
           slots: [
