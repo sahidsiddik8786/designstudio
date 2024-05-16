@@ -28,7 +28,7 @@ const SiteManager = () => {
       images.forEach((image) => formData.append('images', image)); // Append all images
       formData.append('createdBy', auth.user._id);
 
-      await axios.post('https://enigma-designs.onrender.com/api/v1/site/sites', formData, {
+      await axios.post('https://designstudio-1.onrender.com/api/v1/site/sites', formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set content type for FormData
         },

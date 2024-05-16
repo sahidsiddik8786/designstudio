@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "proxy": "https://enigma-designs.onrender.com",
+  "proxy": "https://designstudio-1.onrender.com",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

@@ -21,7 +21,7 @@ const CreateDesign = () => {
   const getAllCategories = async () => {
     try {
       const response = await axios.get(
-        "https://enigma-designs.onrender.com/api/v1/categorydesign/get-categorydesign"
+        "https://designstudio-1.onrender.com/api/v1/categorydesign/get-categorydesign"
       );
       const { success, categorydesign } = response.data;
       if (success) {
@@ -58,7 +58,7 @@ const CreateDesign = () => {
         formData.append("category", category);
 
         const response = await axios.post(
-          "https://enigma-designs.onrender.com/api/v1/image/create-designimg",
+          "https://designstudio-1.onrender.com/api/v1/image/create-designimg",
           formData
         );
 

@@ -104,7 +104,7 @@ const Profile = () => {
     try {
       // Send a PUT request to update the user's profile without the password field
       const { data } = await axios.put(
-        "https://enigma-designs.onrender.com/api/v1/auth/profile",
+        "https://designstudio-1.onrender.com/api/v1/auth/profile",
         {
           firstname,
           lastname,

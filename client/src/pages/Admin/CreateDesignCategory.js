@@ -26,7 +26,7 @@ const CreateDesignCategory = () => {
   
     try {
       const { data } = await axios.post(
-        "https://enigma-designs.onrender.com/api/v1/categorydesign/create-categorydesign",
+        "https://designstudio-1.onrender.com/api/v1/categorydesign/create-categorydesign",
         {
           name,
           description: descriptions[selected?._id], // Use the description from state
@@ -53,7 +53,7 @@ const CreateDesignCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "https://enigma-designs.onrender.com/api/v1/categorydesign/get-categorydesign"
+        "https://designstudio-1.onrender.com/api/v1/categorydesign/get-categorydesign"
       );
       if (data.success) {
         setCategories(data.categorydesign);
@@ -84,7 +84,7 @@ const CreateDesignCategory = () => {
 
     try {
       const { data } = await axios.put(
-        `https://enigma-designs.onrender.com/api/v1/categorydesign/update-categorydesign/${selected._id}`,
+        `https://designstudio-1.onrender.com/api/v1/categorydesign/update-categorydesign/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {

@@ -52,7 +52,7 @@ const CreateProduct = () => {
     // Fetch categories on component mount
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get("https://enigma-designs.onrender.com/api/v1/category/get-category");
+        const { data } = await axios.get("https://designstudio-1.onrender.com/api/v1/category/get-category");
         if (data?.success) {
           setCategories(data?.category);
         }
@@ -70,7 +70,7 @@ const CreateProduct = () => {
       if (selectedCategory) {
         try {
           const { data } = await axios.get(
-            `https://enigma-designs.onrender.com/api/v1/category/${selectedCategory._id}/subcategories`
+            `https://designstudio-1.onrender.com/api/v1/category/${selectedCategory._id}/subcategories`
           );
           if (data?.success) {
             setSubcategories(data?.subcategories);

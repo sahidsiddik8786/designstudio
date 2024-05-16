@@ -44,7 +44,7 @@ const Login = () => {
     }
 
     try {
-      const res = await axios.post("https://enigma-designs.onrender.com/api/v1/auth/login", {
+      const res = await axios.post("https://designstudio-1.onrender.com/api/v1/auth/login", {
         email,
         password,
       });

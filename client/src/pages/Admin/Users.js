@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Users.css";
 
-const API_URL = "https://enigma-designs.onrender.com";
+const API_URL = "https://designstudio-1.onrender.com";
 
 const Users = () => {
   const [users, setUsers] = useState([]);

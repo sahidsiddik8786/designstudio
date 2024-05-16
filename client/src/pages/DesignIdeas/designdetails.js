@@ -26,7 +26,7 @@ const DesignDetailPage = () => {
   const fetchDesignDetails = async () => {
     try {
       const { data } = await axios.get(
-        `https://enigma-designs.onrender.com/api/v1/design/get-design/${designSlug}`
+        `https://designstudio-1.onrender.com/api/v1/design/get-design/${designSlug}`
       );
       setDesign(data?.design);
       setLoading(false);
@@ -58,7 +58,7 @@ const DesignDetailPage = () => {
       <div className="design-detail-container">
         <div className="design-image">
           <img
-            src={`https://enigma-designs.onrender.com/api/v1/design/design-photo/${design._id}`}
+            src={`https://designstudio-1.onrender.com/api/v1/design/design-photo/${design._id}`}
             alt={design.name}
           />
         </div>

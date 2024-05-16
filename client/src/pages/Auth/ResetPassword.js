@@ -25,7 +25,7 @@ function Reset() {
     }
 
     try {
-      const response = await axios.post('https://enigma-designs.onrender.com/update-password', { newPassword });
+      const response = await axios.post('https://designstudio-1.onrender.com/update-password', { newPassword });
 
       if (response.data.message === 'Password updated successfully') {
         toast.success('Password updated successfully');

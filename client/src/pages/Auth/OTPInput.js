@@ -13,7 +13,7 @@ function OTPInput() {
   function resendOTP() {
     if (disable) return;
     axios
-      .post("https://enigma-designs.onrender.com/send-recovery-email", {
+      .post("https://designstudio-1.onrender.com/send-recovery-email", {
         OTP: otp,
         recipient_email: email,
       })

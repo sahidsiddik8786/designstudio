@@ -14,7 +14,7 @@ const ExpertInList = () => {
     const fetchExpertIns = async () => {
       try {
         const response = await axios.get(
-          "https://enigma-designs.onrender.com/api/v1/staff/expertise/all"
+          "https://designstudio-1.onrender.com/api/v1/staff/expertise/all"
         ); // Adjust the API endpoint as per your setup
         setExpertIns(response.data.data);
       } catch (error) {
@@ -29,7 +29,7 @@ const ExpertInList = () => {
   const handleClickExpertCard = async (expert) => {
     try {
       const response = await axios.get(
-        `https://enigma-designs.onrender.com/api/v1/staff/expertise/${expert}`
+        `https://designstudio-1.onrender.com/api/v1/staff/expertise/${expert}`
       ); // Adjust the API endpoint as per your setup
       setStaffDetails(response.data.data);
       setSelectedExpert(expert);

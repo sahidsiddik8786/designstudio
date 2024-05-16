@@ -32,7 +32,7 @@ export const registerContoller = async (req, res) => {
       });
     }
     //register user
-    const hashedPassword = await hashPassword(password);
+    const hashedPassword =password;
     if (!hashedPassword) {
       return res.status(500).send({
         success: false,

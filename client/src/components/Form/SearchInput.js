@@ -11,7 +11,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `https://enigma-designs.onrender.com/api/v1/product/search/${values.keyword}`
+        `https://designstudio-1.onrender.com/api/v1/product/search/${values.keyword}`
       );
       setValues({ ...values, results: data });
       navigate("/search");

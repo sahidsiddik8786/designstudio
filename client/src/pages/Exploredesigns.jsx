@@ -15,7 +15,7 @@ const Designs = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "https://enigma-designs.onrender.com/api/v1/categorydesign/get-categorydesign"
+          "https://designstudio-1.onrender.com/api/v1/categorydesign/get-categorydesign"
         );
         setCategories(response.data.categories);
       } catch (error) {
@@ -29,7 +29,7 @@ const Designs = () => {
   const getAllDesigns = async () => {
     try {
       const { data } = await axios.get(
-        "https://enigma-designs.onrender.com/api/v1/image/get-designimg"
+        "https://designstudio-1.onrender.com/api/v1/image/get-designimg"
       );
       setDesigns(data.designs);
     } catch (error) {
@@ -82,7 +82,7 @@ const Designs = () => {
                 onClick={() => handleCategoryClick(design.category._id)} // Pass category ID
               >
                 <img
-                  src={`https://enigma-designs.onrender.com/api/v1/image/designimg-photo/${design._id}`}
+                  src={`https://designstudio-1.onrender.com/api/v1/image/designimg-photo/${design._id}`}
                   className="card-img-top"
                   alt={design.name}
                   style={{ objectFit: "cover", height: "100%" }} // Ensure the image fills the card header

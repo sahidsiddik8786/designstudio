@@ -146,11 +146,11 @@ const AddStaffMember = () => {
     }
 
     try {
-      await axios.post('https://enigma-designs.onrender.com/api/v1/staff/create-staff', formData);
+      await axios.post('https://designstudio-1.onrender.com/api/v1/staff/create-staff', formData);
       toast.success('Staff member added successfully!');
 
       // Sending registration confirmation email
-      await axios.post('https://enigma-designs.onrender.com/api/v1/staff/send-registration-email', { email: formData.email });
+      await axios.post('https://designstudio-1.onrender.com/api/v1/staff/send-registration-email', { email: formData.email });
 
       setFormData({
         firstname: '',
